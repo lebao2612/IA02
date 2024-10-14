@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bé tập tính</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.1/dist/tailwind.min.css">
+</head>
+
+<body class="bg-gray-100 items-center justify-center h-screen">
+    <div class="p-6 bg-white rounded-lg shadow-lg">
+        <h1 class="font-bold text-2xl text-center mb-6">Bé tập tính</h1>
+        
+        <div class="grid grid-cols-[auto,1fr,1fr] gap-4 items-center">
+            <p class="pr-2 text-sm">Số thứ nhất</p>
+            <input type="text" id="number1" class="border border-gray-300 rounded p-2 text-sm col-start-2 row-start-1">
+
+            <div class="flex space-x-4 col-start-3 row-start-1">
+                <div class="flex items-center">
+                    <input type="radio" id="add" name="operation" value="+" class="mr-1">
+                    <label for="add" class="text-sm">Cộng</label>
+                </div>
+                <div class="flex items-center">
+                    <input type="radio" id="subtract" name="operation" value="-" class="mr-1">
+                    <label for="subtract" class="text-sm">Trừ</label>
+                </div>
+            </div>
+
+            <p class="pr-2 text-sm col-start-1 row-start-2">Số thứ hai</p>
+            <input type="text" id="number2" class="border border-gray-300 rounded p-2 text-sm col-start-2 row-start-2">
+
+            <div class="flex space-x-4 col-start-3 row-start-2">
+                <div class="flex items-center">
+                    <input type="radio" id="multiply" name="operation" value="*" class="mr-1">
+                    <label for="multiply" class="text-sm">Nhân</label>
+                </div>
+                <div class="flex items-center">
+                    <input type="radio" id="divide" name="operation" value="/" class="mr-1">
+                    <label for="divide" class="text-sm">Chia</label>
+                </div>
+            </div>
+
+            <p class="pr-2 text-sm col-start-1 row-start-3">Kết quả</p>
+            <input type="text" id="result" class="border border-gray-300 rounded p-2 text-sm col-start-2 row-start-3" readonly> 
+            <button class="bg-blue-500 text-white px-4 py-2 rounded col-start-3 row-start-3 text-sm" onclick="Calculate()">Tính</button>
+
+            <p class="pr-2 text-sm col-start-1 row-start-4">Thông báo</p>
+            <input type="text" id="message" class="p-2 text-sm col-start-2 row-start-4 row-span-2" readonly>
+        </div>
+    </div>
+
+    <script src="javascript.js"></script>
+</body>
+</html>
